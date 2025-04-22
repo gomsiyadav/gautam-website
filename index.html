@@ -1,165 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gautam Yadav | Digital Sales Leader</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: #1f2937; background: #f9fafb; line-height: 1.6; overflow-x: hidden; }
-    header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeInDown 1s ease-in-out;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    header p { font-size: 1rem; opacity: 0.9; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gautam Yadav | Digital Transformation Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #e74c3c;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .about, .skills, .contact {
+            background: white;
+            margin: 20px 0;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .about p, .skills ul, .contact form {
+            font-size: 1.1em;
+            color: #555;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            margin: 10px 0;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px 20px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background: #e74c3c;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-    section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
-      animation: fadeInUp 1s ease-in-out;
-    }
-    h2 {
-      font-size: 1.6rem;
-      color: #111827;
-      margin-bottom: 20px;
-      position: relative;
-    }
-    h2::after {
-      content: "";
-      display: block;
-      width: 50px;
-      height: 4px;
-      background: #2563eb;
-      margin-top: 10px;
-    }
-
-    .card-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    .card {
-      flex: 1 1 calc(33.333% - 20px);
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-    }
-    .tag {
-      display: inline-block;
-      background: #e0e7ff;
-      color: #3730a3;
-      padding: 6px 12px;
-      margin: 5px 5px 0 0;
-      border-radius: 15px;
-      font-size: 0.85rem;
-      animation: fadeInZoom 0.8s ease-in-out;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #1f2937;
-      color: #d1d5db;
-      font-size: 0.9rem;
-      animation: fadeIn 2s ease-in-out;
-    }
-    a { color: #2563eb; text-decoration: none; }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      header p { font-size: 0.95rem; }
-      .card-list { flex-direction: column; }
-      .card { flex: 1 1 100%; }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInZoom {
-      0% { opacity: 0; transform: scale(0.8); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-  </style>
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        .fade-in-up {
+            animation: fadeInUp 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Gautam Yadav</h1>
-    <p>Digital Transformation | Enterprise Sales | SaaS & GTM Strategy</p>
-  </header>
 
-  <section>
+<header>
+    <h1 class="fade-in">Gautam Yadav</h1>
+    <nav>
+        <a href="#about" class="fade-in-up">About</a>
+        <a href="#skills" class="fade-in-up">Skills</a>
+        <a href="#contact" class="fade-in-up">Contact</a>
+    </nav>
+</header>
+
+<section id="about" class="section fade-in">
     <h2>About Me</h2>
-    <p>I’m a digital sales leader with over 9+ years of experience working with enterprises, GCCs, and public sector clients. My mission is to drive growth through innovation—blending SaaS, AI, RPA, and digital platforms to deliver results. From building high-impact sales pipelines to leading RFP strategies, I help organizations turn complexity into opportunity.</p>
-  </section>
-
-  <section>
-    <h2>What I Do</h2>
-    <div class="card-list">
-      <div class="card">
-        <h3>Enterprise GTM Strategy</h3>
-        <p>Designing scalable Go-To-Market strategies for SaaS, CPaaS, and Digital Transformation practices.</p>
-      </div>
-      <div class="card">
-        <h3>Sales & Pipeline Leadership</h3>
-        <p>Managing multimillion-dollar pipelines, executing growth campaigns, and closing large enterprise deals.</p>
-      </div>
-      <div class="card">
-        <h3>Bid & RFP Management</h3>
-        <p>Driving RFP/RFI/Pitch responses to win complex transformation deals with government and corporate clients.</p>
-      </div>
+    <div class="about">
+        <p>
+            I am a result-driven sales leader with over 9+ years of expertise in transforming businesses through innovative
+            sales strategies, digital transformation, and sustainable pipeline building. I specialize in SaaS, enterprise solutions,
+            and intelligent automation. Passionate about leveraging cutting-edge technologies to drive exceptional growth and customer value.
+        </p>
     </div>
-  </section>
+</section>
 
-  <section>
-    <h2>Core Skills</h2>
-    <div>
-      <span class="tag">SaaS Sales</span>
-      <span class="tag">Digital Transformation</span>
-      <span class="tag">RPA & AI</span>
-      <span class="tag">Salesforce & Hubspot</span>
-      <span class="tag">GTM Strategy</span>
-      <span class="tag">Bid Management</span>
-      <span class="tag">Enterprise Selling</span>
+<section id="skills" class="section fade-in-up">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <ul>
+            <li>Sales Strategy & Execution</li>
+            <li>Business Development</li>
+            <li>Digital Transformation</li>
+            <li>SaaS & Enterprise Solutions</li>
+            <li>CRM Tools (Salesforce, HubSpot)</li>
+            <li>Bid Management</li>
+            <li>RPA, AI, and Cloud Solutions</li>
+        </ul>
     </div>
-  </section>
+</section>
 
-  <section>
-    <h2>Let's Connect</h2>
-    <p>Email: <a href="mailto:gomsiyadav@gmail.com">gomsiyadav@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/gautamyadavv" target="_blank">@gautamyadavv</a></p>
-    <p>Topmate: <a href="https://topmate.io/gautam_yadav" target="_blank">Book a call</a></p>
-    <p>Medium: <a href="https://medium.com/@gomsiyadav" target="_blank">Read My Articles</a></p>
-  </section>
+<section id="contact" class="section fade-in-up">
+    <h2>Contact Me</h2>
+    <div class="contact">
+        <form action="mailto:gomsiyadav@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
 
-  <footer>
-    © 2025 Gautam Yadav. Built with vision & hustle.
-  </footer>
+<footer>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/gautamyadavv/" style="color: white;">LinkedIn</a> or <a href="https://medium.com/@gomsiyadav" style="color: white;">Medium</a></p>
+</footer>
+
 </body>
 </html>
