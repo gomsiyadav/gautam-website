@@ -185,6 +185,61 @@
     margin-top: 20px;
   }
 }
+#contact {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contact-card img {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.contact-card strong {
+  font-size: 1.2rem;
+  color: #facc15;
+}
+
+.contact-card p {
+  color: #cbd5e1;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -257,11 +312,31 @@
   </a>
 </section>
 
-<section id="contact">
+section id="contact">
   <h2>Let’s Connect</h2>
-  <p>Email: <a href="mailto:gomsiyadav@gmail.com" style="color:#60a5fa;">gomsiyadav@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/gautamyadavv" target="_blank" style="color:#60a5fa;">linkedin.com/in/gautamyadavv</a></p>
-  <p>Topmate: <a href="https://topmate.io/gautam_yadav" target="_blank" style="color:#60a5fa;">Book a Session</a></p>
+  <div class="contact-grid">
+    <a href="mailto:gomsiyadav@gmail.com" class="contact-card email" target="_blank">
+      <img src="https://img.icons8.com/fluency/48/gmail.png" alt="Email Icon" />
+      <div>
+        <strong>Email</strong>
+        <p>gomsiyadav@gmail.com</p>
+      </div>
+    </a>
+    <a href="https://linkedin.com/in/gautamyadavv" class="contact-card linkedin" target="_blank">
+      <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn Icon" />
+      <div>
+        <strong>LinkedIn</strong>
+        <p>/gautamyadavv</p>
+      </div>
+    </a>
+    <a href="https://topmate.io/gautam_yadav" class="contact-card topmate" target="_blank">
+      <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-topmate-connect-with-your-favorite-experts-via-a-video-call-logo-color-tal-revivo.png" alt="Topmate Icon" />
+      <div>
+        <strong>Topmate</strong>
+        <p>Book a Session</p>
+      </div>
+    </a>
+  </div>
 </section>
 
 <footer>
